@@ -6,16 +6,16 @@ export function Navbar(){
     const navigate = useNavigate();
     return (
         <>
-            <nav>
-                <ul className="flex justify-between px-5 py-6 bg-gray-800">
+            <nav >
+                <ul className="flex justify-between px-5 py-6 bg-color-reddish">
                     <li>
                         <button
                             onClick={() => {
                                 navigate("/");
                             }}
-                            className="text-off-white"
+                            className="text-color-offwhite text-xl"
                         >
-                            Logo
+                            Todo
                         </button>
                     </li>
                     <li>
@@ -23,7 +23,7 @@ export function Navbar(){
                             onClick={() => {
                                 navigate("/Login");
                             }}
-                            className="text-off-white"
+                            className="text-color-offwhite text-xl"
                         >
                             {loginLogo}
                         </button>
