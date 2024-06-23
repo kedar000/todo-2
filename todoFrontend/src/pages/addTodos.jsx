@@ -41,17 +41,27 @@ export function AddTodos(){
     return(
         <>
         <Navbar />
-            <div className="card w-1/3 h-1/2">
-            <div className="input flex flex-col">
-                <input  onChange={(e) =>{ setTask(e.target.value)       }} value={task} type="text" placeholder="Enter the Task"></input>
-                <input  onChange={(e) =>{ setDescription(e.target.value)}} value={description} type="text" placeholder="Enter the Task Description"></input>
-            </div>
-            <div className="buttons flex flex-row justify-between align-middle w-1/3">
-                <button onClick={()=>{addTodobackend() ; clearData()}}>Add</button>
-                <button onClick={clearData}>Clear</button>
-            </div>
+        <div className="bg-color-offwhite  h-screen  justify-center flex flex-col items-center">
+            <div className="card w-full max-w-2xl mx-auto bg-color-lightgreen rounded-lg p-8 flex flex-col">
+                <div className="text-center text-3xl font-semibold font-mono mb-4"> Add Todo</div>
+                <h1 className="text-md font-semibold mb-1 font-mono mt-4">Task</h1>
+                <input  onChange={(e) =>{ setTask(e.target.value)       }} 
+                        value={task} type="text"
+                        placeholder="Enter the Task"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></input>
+                <h1 className="text-md font-semibold mb-1 font-mono mt-6">Description</h1>
+                <input  onChange={(e) =>{ setDescription(e.target.value)}} value={description} type="text" placeholder="Enter the Task Description"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"                ></input>
+            
+                <div className="buttons flex flex-row justify-evenly mt-4 ">
+                    <button onClick={()=>{addTodobackend() ; clearData()}}
+                    className=" px-6 bg-color-reddish my-5 p-2 rounded-md text-color-offwhite text-l font-semibold font-mono">Add</button>
+                    <button onClick={clearData} className="px-6 bg-color-reddish my-5 p-2 rounded-md text-color-offwhite text-l font-semibold font-mono">Clear</button>
+                </div>
                 
             </div>
+        </div>
+            
         </>
     )
 }
