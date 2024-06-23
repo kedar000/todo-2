@@ -25,9 +25,9 @@ import { useState } from "react";
                         <button onClick={()=>{
                             navigate("/addTodos")
                             console.log("called the AddTodos")
-                        }} className="px-4 py-2 bg-color-reddish rounded-md text-color-offwhite "> Add Todo</button>
+                        }} className="px-4 py-2 bg-color-reddish rounded-md text-color-offwhite font-mono "> Add Todo</button>
                         <button onClick={()=>{ navigate('/ShowTodo') }} 
-                        className="px-4 py-2 bg-color-reddish rounded-md text-color-offwhite "> Show Todos</button>
+                        className="px-4 py-2 bg-color-reddish rounded-md text-color-offwhite font-mono"> Show Todos</button>
                     </div>
                 </div>
             </div>

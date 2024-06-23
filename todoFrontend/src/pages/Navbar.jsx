@@ -7,13 +7,13 @@ export function Navbar(){
     return (
         <>
             <nav >
-                <ul className="flex justify-between px-5 py-6 bg-color-reddish">
+                <ul className=" flex justify-between px-5 py-5 bg-color-reddish">
                     <li>
                         <button
                             onClick={() => {
                                 navigate("/");
                             }}
-                            className="text-color-offwhite text-xl"
+                            className="text-color-offwhite text-xl font-mono"
                         >
                             Todo
                         </button>
@@ -23,7 +23,7 @@ export function Navbar(){
                             onClick={() => {
                                 navigate("/Login");
                             }}
-                            className="text-color-offwhite text-xl"
+                            className="text-color-offwhite text-xl font-mono"
                         >
                             {loginLogo}
                         </button>
