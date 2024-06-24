@@ -39,13 +39,60 @@ export function Update(){
     }
     return (
         <>
-            <Navbar />
-            
-            <input onChange={(e) => setUpdateTask(e.target.value)} type="text" placeholder="Task"/>
-            <input onChange={(e) => setUpdateDescription(e.target.value)} type="text" placeholder="Description"/>
             <div>
-                <button onClick={updateTodoReq}>Update</button>
-                <button onClick={() => navigate('/ShowTodo')}>Back</button>
+                <Navbar />
+                <div className=" flex justify-center items-center w-screen h-screen bg-color-offwhite">
+                <div className=" container grid grid-cols-2 bg-color-lightgreen   w-full max-w-4xl  p-8 rounded-lg shadow-md">
+                    <div className=" flex flex-col mx-6">
+
+                    <h1 className="text-2xl font-mono font-semibold underline mb-4 ">Task</h1>
+
+                        <div className="flex flex-row">
+
+                            <div className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-900 font-mono leading-tight focus:outline-none focus:shadow-outline mr-4">{prevTask}</div>
+                            
+                            <div className="">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div className="flex felx-row">
+
+                            <div className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-900 font-mono leading-tight focus:outline-none focus:shadow-outline mr-4">{prevDescription}</div>
+                            
+                            <div className="">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                    <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div className=" ">
+
+                        <h1 className="text-2xl font-mono font-semibold mb-3">Update</h1>
+
+                        <div className="flex flex-col ">
+                        
+                            <input onChange={(e) => setUpdateTask(e.target.value)} type="text" placeholder="Task" className=" mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+                            <input onChange={(e) => setUpdateDescription(e.target.value)} type="text" placeholder="Description" className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+                        </div>
+
+                        <div className="flex justify-between mt-2">
+                            <button onClick={updateTodoReq}
+                                    className="bg-color-reddish  text-color-offwhite font-semibold py-2 px-4 rounded font-mono"
+                                    >Update</button>
+                            <button onClick={() => navigate('/ShowTodo')}
+                                    className="bg-color-reddish  text-color-offwhite font-semibold py-2 px-4 rounded font-mono"
+                                    >Back</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
             </div>
         </>
     );
