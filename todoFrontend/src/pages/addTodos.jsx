@@ -48,10 +48,10 @@ export function AddTodos(){
                 <input  onChange={(e) =>{ setTask(e.target.value)       }} 
                         value={task} type="text"
                         placeholder="Enter the Task"
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></input>
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 font-mono leading-tight focus:outline-none focus:shadow-outline"></input>
                 <h1 className="text-md font-semibold mb-1 font-mono mt-6">Description</h1>
                 <input  onChange={(e) =>{ setDescription(e.target.value)}} value={description} type="text" placeholder="Enter the Task Description"
-                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"                ></input>
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight font-mono focus:outline-none focus:shadow-outline"                ></input>
             
                 <div className="buttons flex flex-row justify-evenly mt-4 ">
                     <button onClick={()=>{addTodobackend() ; clearData()}}
