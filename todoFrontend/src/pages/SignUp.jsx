@@ -32,7 +32,9 @@ export function SignUp(){
      
 
     return(
-        <>
+        <> 
+
+        
             <Navbar />
             <div>
                 <div className="bg-color-offwhite flex items-center justify-center h-screen flex-col">
