@@ -85,40 +85,54 @@ export function ShowTodo(){
 
     return (
         <>
-            <Navbar />
+                <Navbar />
+            <div className="flex justify-center items-center w-screen h-screen bg-color-offwhite">
+                
+                <div className="flex flex-row justify-between ">
+
+                    <div className="main w-full mx-auto p-8 max-w-md rounded-lg shadow-md bg-color-lightgreen">
+                        <div>todos to complete</div>
+                            {todos.map((todo, index) => 
+                                (todo.isCompleted === false && todo.delete === false) && (
+                                (
+                                    <div key={index} className="flex flex-col p-4 border m-3  ">
+                                        <div >
+                                            <h1 className=" overflow-hidden text-balance shadow appearance-none border rounded w-full py-2 px-3 text-gray-900 font-mono leading-tight focus:outline-none focus:shadow-outline mr-4">
+                                                {todo.task}
+                                            </h1> 
+                                            <h1 className="overflow-x-auto text-wrap shadow appearance-none border rounded w-full py-2 px-3 text-gray-900 font-mono leading-tight focus:outline-none focus:shadow-outline mr-4">
+                                                {todo.description}
+                                            </h1> 
+                                        </div>  
+                                        <div className="p-2 ">
+                                            <button className="px-2" onClick={() => handleUpdate(todo)}>Update</button>
+                                            <button className="px-2" onClick={() => isCompleted(todo)}>Done</button>
+                                            <button className="px-2" onClick={() => deleteTodo(todo)}>Delete</button>
+                                        </div>
+                                    </div>
+                                )
+                            ))}
+                    </div>
+
+                    <div className="justify-center content-center mr-4">
+                        <div>Completed todos</div>
+                        {todos.map((todo, index) => 
+                            (todo.isCompleted === true && todo.delete === false) && (
+                            (
+                                <div key={index} className="flex justify-between">
+                                    <div>{todo.task} || {todo.description}</div>  
+                                    <div>
+                                        <button className=" px-4" onClick={()=>unfinshed(todo)}>Un Done</button>
+                                    </div>
+                                </div>
+                            )
+                        ))}
+                    </div>
+
+                </div>
+
+            </div>
             
-            <div className="flex flex-row justify-between">
-            <div className="main bg-red-400 m-4">
-            <div>todos to complete</div>
-                {todos.map((todo, index) => 
-                    (todo.isCompleted === false && todo.delete === false) && (
-                     (
-                        <div key={index} className="flex ">
-                            <div>{todo.task} || {todo.description}</div>  
-                            <div className="p-2 ">
-                                <button className="px-2" onClick={() => handleUpdate(todo)}>Update</button>
-                                <button className="px-2" onClick={() => isCompleted(todo)}>Done</button>
-                                <button className="px-2" onClick={() => deleteTodo(todo)}>Delete</button>
-                            </div>
-                        </div>
-                    )
-                ))}
-            </div>
-            <div className="justify-center content-center mr-4">
-                <div>Completed todos</div>
-                {todos.map((todo, index) => 
-                    (todo.isCompleted === true && todo.delete === false) && (
-                     (
-                        <div key={index} className="flex justify-between">
-                            <div>{todo.task} || {todo.description}</div>  
-                            <div>
-                                <button className=" px-4" onClick={()=>unfinshed(todo)}>Un Done</button>
-                            </div>
-                        </div>
-                    )
-                ))}
-            </div>
-            </div>
         </>
     );
     

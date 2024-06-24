@@ -40,13 +40,13 @@ export function Login(){
                         <input onChange={e =>{ setsignInMail(e.target.value)     }} 
                             type="text" 
                             placeholder="Enter The Email"
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="mb-5 font-mono shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         ></input>
                         <p className=" text-sm font-semibold mb-1 jmt-6 font-mono">Password</p>
                         <input onChange={e =>{ setSignInPassword(e.target.value) }} 
                             type="password" 
                             placeholder="Enter The Password"
-                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow font-mono appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         ></input>
                     </div>
                     <div className="flex flex-col justify-between ">

@@ -14,6 +14,11 @@ export function Update(){
     const [updateTask, setUpdateTask] = useState('');
     const [updateDescription, setUpdateDescription] = useState('');
 
+    console.log(prevTask)
+    console.log(prevDescription)
+    console.log(updateTask)
+    console.log(updateDescription)
+
     function updateTodoReq(){
         
         try {
@@ -76,9 +81,21 @@ export function Update(){
                         <h1 className="text-2xl font-mono font-semibold mb-3">Update</h1>
 
                         <div className="flex flex-col ">
+
                         
-                            <input onChange={(e) => setUpdateTask(e.target.value)} type="text" placeholder="Task" className=" mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
-                            <input onChange={(e) => setUpdateDescription(e.target.value)} type="text" placeholder="Description" className="mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+                            <input onChange={(e) => {const value = e.target.value;
+                                                        setUpdateTask(value !== "" ? value : prevTask);
+                                                    }}
+                                    type="text" 
+                                    placeholder="Task" 
+                                    className="font-mono mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+
+                            <input onChange={(e) => {const value = e.target.value;
+                                                        setUpdateDescription(value !== "" ? value : prevDescription);
+                                                    }}
+                                    type="text" 
+                                    placeholder="Description" 
+                                    className="font-mono mb-3 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
                         </div>
 
                         <div className="flex justify-between mt-2">
