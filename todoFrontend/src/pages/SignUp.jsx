@@ -59,12 +59,12 @@ export function SignUp(){
                             ></input>
 
                         </div>
-                        <div class="flex justify-between my-8">
+                        <div className="flex justify-between my-8">
 
-                            <button class="bg-color-reddish  text-color-offwhite font-semibold py-2 px-4 rounded font-mono"  onClick={userSignup}>
+                            <button className="bg-color-reddish  text-color-offwhite font-semibold py-2 px-4 rounded font-mono"  onClick={userSignup}>
                                 Signup
                             </button>
-                            <button class="bg-color-reddish  text-color-offwhite font-semibold py-2 px-4 rounded font-mono" onClick={back}>
+                            <button className="bg-color-reddish  text-color-offwhite font-semibold py-2 px-4 rounded font-mono" onClick={back}>
                                 Back
                             </button>
                             

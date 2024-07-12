@@ -4,6 +4,19 @@ import { useNavigate } from "react-router-dom"
 export function Navbar(){
     const [loginLogo , setLoginLogo] =useState('Login')
     const navigate = useNavigate();
+
+    function checkToken(){
+        const token = localStorage.getItem("token")
+        if(token && token !== ""){
+            return true 
+        }
+        else{
+            return false;
+        }
+    }
+    // if(checkToken){
+    //     setLoginLogo("loggedIn")
+    // }
     return (
         <>
             <nav >
